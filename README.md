@@ -1,13 +1,11 @@
 # Image_Annotation
 
 Program Flow:
-<head>
+
 1) Run the code in the terminal follows: python ImageAnnotation.py "location of your video file here"
    It's currently set for .mp4 files only, but you can change this by modifying line 252 to the desired video format
-</head>
-<head>
+
 2) The program will ask you what model you are using.
-</head>
 <p style="text-align:left;">Depending on what is pressed a directory will be created using the model name in this format:</p>
   
       	|-- Model Name
@@ -16,12 +14,9 @@ Program Flow:
 			     |-- labels
 
 <p style="text-align:left;">Typing 5 will create a directory for each model. These directories are where the images and kitti files will be stored.</p>
-<head>
 3) If the file passed on the command line is a proper video file, two windows will appear, one is running your video file and the other one allows you to change the frame location in your video
-</head>
-<head>
+
 4) Controlling the Video:
-</head>
 <p style="text-align:left;">'w': Pauses unpauses the video</p>
 <p style="text-align:left;">'d': Removes the bounding box from the video frame, can't unpause video until this key is pressed</p>
 <p style="text-align:left;">'a': Saves the current frame as a png and creates a kitti formatted .txt file using the class name Not_Near_OverFlow, only works if a bounding box is drawn and video is paused</p>
