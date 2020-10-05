@@ -33,14 +33,18 @@ Program Flow:
         and video is paused
    'q': Terminates the program if the video is unpaused
    
-   Frames and kitti formatted files are stored in the following way:
+   Frames and kitti formatted files are stored in the following way
   
-    |-- Model Name
-      |-- dataset
-        |-- images
-          -- 0.png
-        |-- labels
-          -- 0.txt
+      |-- Model Name
+      
+		    |-- dataset
+			 
+			     |-- images
+
+		            -- 0.png
+      
+			     |-- labels
+                  -- 0.txt
               
     Each image and text file map to each other using the same name. The index used for each image and text file are incremented after saving a new one.
 
