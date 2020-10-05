@@ -18,7 +18,7 @@ Program Flow:
 3) If the file passed on the command line is a proper video file, two windows will appear, one is running your video file and the other one allows you to change the frame location in your video
 
 4) Controlling the Video:
-<p style="text-align:left;">'w': Pauses/unpauses the video</p>
+<p style="text-align:center;">'w': Pauses/unpauses the video</p>
 <p style="text-align:left;">'d': Removes the bounding box from the video frame, can't unpause video until this key is pressed</p>
 <p style="text-align:left;">'a': Saves the current frame as a png and creates a kitti formatted .txt file using the class name Not_Near_OverFlow, only works if a bounding box is drawn and video is paused</p>
 <p style="text-align:left;">'s': Saves the current frame as a png and creates a kitti formatted .txt file using the class name Near_OverFlow, only works if a bounding box is drawn and video is paused</p>
