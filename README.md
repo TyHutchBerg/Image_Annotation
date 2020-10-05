@@ -17,8 +17,8 @@ Program Flow:
   
       	|-- Model Name
 		    |-- dataset
-			     |-- images
-			     |-- labels
+		     |-- images
+		     |-- labels
 
   Typing 5 will create a directory for each model. These directories are where the images and kitti files will be stored.
   
