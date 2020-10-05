@@ -1,9 +1,10 @@
 # Image_Annotation
 
 Program Flow:
-
+<head>
 1) Run the code in the terminal follows: python ImageAnnotation.py "location of your video file here"
    It's currently set for .mp4 files only, but you can change this by modifying line 252 to the desired video format
+</head>
 <head>
 2) The program will ask you what model you are using.
 </head>
