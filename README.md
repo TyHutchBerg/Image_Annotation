@@ -15,7 +15,6 @@ Program Flow:
 
 <p style="text-align:left;">Typing 5 will create a directory for each model. These directories are where the images and kitti files will be stored.</p>
 3) If the file passed on the command line is a proper video file, two windows will appear, one is running your video file and the other one allows you to change the frame location in your video
-
 4) Controlling the Video:
 <p style="text-align:left;">'w': Pauses unpauses the video</p>
 <p style="text-align:left;">'d': Removes the bounding box from the video frame, can't unpause video until this key is pressed</p>
