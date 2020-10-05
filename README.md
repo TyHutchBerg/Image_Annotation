@@ -15,10 +15,10 @@ Program Flow:
   
   Depending on what is pressed a directory will be created using the model name in this format:
   
-  |-- Model Name
-    |-- dataset
-      |-- images
-      |-- labels
+      	|-- Model Name
+		    |-- dataset
+			     |-- images
+			     |-- labels
 
   Typing 5 will create a directory for each model. These directories are where the images and kitti files will be stored.
   
