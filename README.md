@@ -35,16 +35,18 @@ Program Flow:
    
    Frames and kitti formatted files are stored in the following way
   
-      |-- Model Name
+  
+      	|-- Model Name
       
 		    |-- dataset
 			 
 			     |-- images
 
-		            -- 0.png
+		                 -- 0.png
       
 			     |-- labels
-                  -- 0.txt
+			     
+                                 -- 0.txt
               
     Each image and text file map to each other using the same name. The index used for each image and text file are incremented after saving a new one.
 
