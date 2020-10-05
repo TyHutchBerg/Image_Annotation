@@ -4,21 +4,24 @@ Program Flow:
 
 1) Run the code in the terminal follows: python ImageAnnotation.py "location of your video file here"
    It's currently set for .mp4 files only, but you can change this by modifying line 252 to the desired video format
+<head>
 2) The program will ask you what model you are using.
-  
-  Depending on what is pressed a directory will be created using the model name in this format:
+</head>
+<p style="text-align:left;">Depending on what is pressed a directory will be created using the model name in this format:</p>
   
       	|-- Model Name
 		    |-- dataset
 			     |-- images
 			     |-- labels
 
-  Typing 5 will create a directory for each model. These directories are where the images and kitti files will be stored.
-  
+<p style="text-align:left;">Typing 5 will create a directory for each model. These directories are where the images and kitti files will be stored.</p>
+<head>
 3) If the file passed on the command line is a proper video file, two windows will appear, one is running your video file and the other one allows you to change the frame location in your video
-
+</head>
+<head>
 4) Controlling the Video:
-<p style="text-align:left;">'w': Pauses/unpauses the video</p>
+</head>
+<p style="text-align:left;">'w': Pauses unpauses the video</p>
 <p style="text-align:left;">'d': Removes the bounding box from the video frame, can't unpause video until this key is pressed</p>
 <p style="text-align:left;">'a': Saves the current frame as a png and creates a kitti formatted .txt file using the class name Not_Near_OverFlow, only works if a bounding box is drawn and video is paused</p>
 <p style="text-align:left;">'s': Saves the current frame as a png and creates a kitti formatted .txt file using the class name Near_OverFlow, only works if a bounding box is drawn and video is paused</p>
@@ -26,7 +29,6 @@ Program Flow:
 <p style="text-align:left;">'left mouse click down: Left click on the mouse creates the bounding box and sest the upper left hand corner</p>
 <p style="text-align:left;">'mouse move: Moving the mouse controls how the bounding box grows</p>
 <p style="text-align:left;">'left mouse click up: Sets the final position of the bounding box and this point the frame can be saved</p>
-
    
    Frames and kitti formatted files are stored in the following way
   
