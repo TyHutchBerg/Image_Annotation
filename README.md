@@ -18,12 +18,15 @@ Program Flow:
 3) If the file passed on the command line is a proper video file, two windows will appear, one is running your video file and the other one allows you to change the frame location in your video
 
 4) Controlling the Video:
-<p style="text-align:center;">'w': Pauses/unpauses the video</p>
+<p style="text-align:left;">'w': Pauses/unpauses the video</p>
 <p style="text-align:left;">'d': Removes the bounding box from the video frame, can't unpause video until this key is pressed</p>
 <p style="text-align:left;">'a': Saves the current frame as a png and creates a kitti formatted .txt file using the class name Not_Near_OverFlow, only works if a bounding box is drawn and video is paused</p>
 <p style="text-align:left;">'s': Saves the current frame as a png and creates a kitti formatted .txt file using the class name Near_OverFlow, only works if a bounding box is drawn and video is paused</p>
 <p style="text-align:left;">'q': Terminates the program if the video is unpaused</p>
-<p style="text-align:left;">'left mouse click: Left click on the mouse</p>
+<p style="text-align:left;">'left mouse click down: Left click on the mouse creates the bounding box and sest the upper left hand corner</p>
+<p style="text-align:left;">'mouse move: Moving the mouse controls how the bounding box grows</p>
+<p style="text-align:left;">'left mouse click up: Sets the final position of the bounding box and this point the frame can be saved</p>
+
    
    Frames and kitti formatted files are stored in the following way
   
