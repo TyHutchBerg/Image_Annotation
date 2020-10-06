@@ -223,6 +223,7 @@ drawMode, paused, roi = False, False, False
 top_left_x, top_left_y = -1, -1
 bottom_right_x, bottom_right_y = -1, -1
 
+# Gets the current image number from a text file
 with open('annotation_index.txt', 'r') as reader:
     index = int(reader.readline())
 
@@ -376,11 +377,17 @@ if __name__ == '__main__':
                             # Increments a counter for use in naming future images
                             index = index + 1
 
+                        # Remove the bounding box from the frame and redraw the frame
+                        roi = False
+                        frame = cache
+                        cv2.imshow('video', frame)
+
         # Quits the video and closes all windows
         elif key == ord('q'):
             cv2.destroyAllWindows()
             break
 
+    # Stores the image number that the program ends on to be reused next time the program starts up
     with open('annotation_index.txt', 'w') as writer:
         writer.write(str(index))
 
