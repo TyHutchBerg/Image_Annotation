@@ -220,9 +220,13 @@ def createDataDir(model_dir):
 
 frame, cache = None, None
 drawMode, paused, roi = False, False, False
-index = 0
 top_left_x, top_left_y = -1, -1
 bottom_right_x, bottom_right_y = -1, -1
+
+with open('annotation_index.txt', 'r') as reader:
+    index = int(reader.readline())
+
+reader.close()
 
 # Draws the bounding box and saves the
 def drawBoundingBox(event, x, y, flags, param):
@@ -376,3 +380,8 @@ if __name__ == '__main__':
         elif key == ord('q'):
             cv2.destroyAllWindows()
             break
+
+    with open('annotation_index.txt', 'w') as writer:
+        writer.write(str(index))
+
+    writer.close()
