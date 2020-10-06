@@ -15,7 +15,8 @@ Program Flow:
 
 <p style="text-align:left;">Typing 5 will create a directory for each model. These directories are where the images and kitti files will be stored.</p>
 3) If the file passed on the command line is a proper video file, two windows will appear, one is running your video file and the other one allows you to change the frame location in your video
-4) Controlling the Video:
+
+<p style="text-align:left;">4) Controlling the Video:</p>
 <p style="text-align:left;">'w': Pauses unpauses the video</p>
 <p style="text-align:left;">'d': Removes the bounding box from the video frame, can't unpause video until this key is pressed</p>
 <p style="text-align:left;">'a': Saves the current frame as a png and creates a kitti formatted .txt file using the class name Not_Near_OverFlow, only works if a bounding box is drawn and video is paused</p>
@@ -34,6 +35,6 @@ Program Flow:
 		                 -- 0.png
 			     |-- labels
                          	 -- 0.txt
-              
-    Each image and text file map to each other using the same name. The index used for each image and text file are incremented after saving a new one.
+             
+<p style="text-align:left;">Each image and text file map to each other using the same name. The index used for each image and text file are incremented after saving a new one.</p>
 
