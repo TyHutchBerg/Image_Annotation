@@ -39,3 +39,4 @@ Program Flow:
              
 <p style="text-align:left;">Each image and text file map to each other using the same name. The index used for each image and text file are incremented after saving a new one.</p>
 
+<p style="text-align:left;">The annotation_index.txt file keeps of the file number you left off at, so you can run the program through other video files and not write over previously saved images.
