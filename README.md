@@ -22,7 +22,8 @@ Program Flow:
    
    Frames and kitti formatted files are stored in the following way
   
-  
+  	|-- metadata
+		|-- 0_metadata.txt
       	|-- Model Name
 		    |-- dataset
 			     |-- images
