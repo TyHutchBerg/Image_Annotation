@@ -2,7 +2,7 @@
 
 Program Flow:
 
-1) Run the code in the terminal follows: python ImageAnnotation.py "location of your video file here"
+1) Run the code in the terminal follows: python AutomatedAnnotation.py "location of your video file here"
    It's currently set for .mp4 files only, but you can change this by modifying line 252 to the desired video format
 
 2) <p style="text-align:left;">The program generates a directory for each model name in the following format:</p>
