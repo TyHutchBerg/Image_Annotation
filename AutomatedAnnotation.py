@@ -403,7 +403,7 @@ if __name__ == '__main__':
 
         # Sets the unchangeable bounding box
         if not lock_roi:
-            print("Set the bounding box for the video. Pressing 'f' after drawing the bounding box locks it in to place")
+            print("Set the bounding box for the video. Pressing 's' after drawing the bounding box locks it in to place")
 
         while cv2.waitKey(1) & 0xFF != ord('s') and not lock_roi:
             cv2.imshow('video', frame)
