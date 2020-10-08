@@ -24,12 +24,12 @@ Program Flow:
   
   	|-- metadata
 		|-- 0_metadata.txt
-      	|-- Model Name
-		    |-- dataset
-			     |-- images
-		                 -- 0.png
-			     |-- labels
-                         	 -- 0.txt
+    |-- Model Name
+		|-- dataset
+			 |-- images
+		             -- 0.png
+			 |-- labels
+                         -- 0.txt
              
 <p style="text-align:left;">Each image and text file map to each other using the same name. The index used for each image and text file are incremented after saving a new one.</p>
 
