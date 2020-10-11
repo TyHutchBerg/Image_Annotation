@@ -1,6 +1,7 @@
 import cv2
 import os
 
+# Paths for each model's directories
 model_dirs = {'DetectNet_v2': {'images_dir': 'DetectNet_v2\\dataset\\images', 'labels_dir': 'DetectNet_v2\\dataset\\labels'},
                  'YoloV3': {'images_dir': 'YoloV3\\dataset\\images', 'labels_dir': 'YoloV3\\dataset\\labels'},
                  'FasterRCNN': {'images_dir': 'FasterRCNN\\dataset\\images', 'labels_dir': 'FasterRCNN\\dataset\\labels'},
@@ -14,7 +15,7 @@ if __name__ == '__main__':
     # Draw the bounding box and the label on the image
     # Displays the image
 
-    # Asks the user which model directoy they want to display the images from
+    # Asks the user which model directory they want to display the images from
     while True:
         print('Visualize which Directory:')
         print('1) DetectNet_v2')
@@ -61,7 +62,8 @@ if __name__ == '__main__':
     if not os.path.isdir(labels_dir):
         print(labels_dir + ' could not be found')
         exit(-1)
-
+    
+    # Iterates through all of the files in the directory
     for filename in os.listdir(images_dir):
         # Checks if the file is an image
         if not (filename.endswith('.jpg') or filename.endswith('.png')):
@@ -105,6 +107,7 @@ if __name__ == '__main__':
         cv2.rectangle(image, (x_min, y_min), (x_max, y_max), (0, 0, 255), thickness=3)
         cv2.putText(image, class_name, (x_min, y_min - 10), cv2.FONT_HERSHEY_COMPLEX, 0.9, (0, 0, 255), 2)
 
+        # Display the image
         cv2.imshow('Image', image)
         key = cv2.waitKey(0) & 0xFF
 
