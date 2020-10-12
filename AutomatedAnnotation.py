@@ -290,6 +290,7 @@ if __name__ == '__main__':
     frame_increment = 100
     automated = False
     end_loop = False
+    continue_loop = False
     frame_range = False
 
     # Stores the video file passed
@@ -299,8 +300,8 @@ if __name__ == '__main__':
         print('Invalid video file')
         exit(-1)
 
-    for key, values in model_formats.items():
-        createDataDir(key)
+    for model, spec in model_formats.items():
+        createDataDir(model)
 
     # Asks user if the tank footage is all one type to speed up annotating process
     while True:
@@ -362,7 +363,9 @@ if __name__ == '__main__':
             # Sets the frame_range to true, begins the video at the starting point and reduces the rate the video progresses
             frame_range = True
             frame_index = start * int(video.get(cv2.CAP_PROP_FPS))
-            frame_increment = 50
+
+            # This value can be changed if you want save frames that are close together. Default is 100
+            frame_increment = 100
             video.set(cv2.CAP_PROP_POS_FRAMES, frame_index)
             break
 
@@ -415,15 +418,15 @@ if __name__ == '__main__':
         class_name = None
 
         if automated:
-            if choice == 1:
+            if choice == 1 or choice == 4:
                 class_name = 'Low'
-            elif choice == 2:
+            elif choice == 2 or choice == 5:
                 class_name = 'Medium'
-            else:
+            elif choice == 3 or choice == 6:
                 class_name = 'High'
         else:
             while True:
-                print('Enter Class Name Low(1), Medium(2), High(3) or \'q\' to quit: ')
+                print('Enter Class Name Low(1), Medium(2), High(3), \'c\' to skip frame or \'q\' to quit: ')
                 # Wait for the key press for the class name
                 key = cv2.waitKey(0) & 0xFF
                 # Class name determined by user input
@@ -439,23 +442,31 @@ if __name__ == '__main__':
                 elif key == ord('q'):
                     end_loop = True
                     break
+                elif key == ord('c'):
+                    continue_loop = True
+                    break
                 else:
                     continue
             # q was pressed so exiting video footage
             if end_loop:
                 break
 
+            # c was pressed so skip current frame
+            if continue_loop:
+                continue_loop = False
+                continue
+
         # Resizes and saves the frame to all of the model's directories
-        for key, value in model_formats.items():
+        for model, specs in model_formats.items():
             # Resizes the image to the model's specification
-            res, resized_img, resized_bounding_box = resizeImg(cache, bounding_box, key)
+            res, resized_img, resized_bounding_box = resizeImg(cache, bounding_box, model)
 
             # Save the frame to the designated model's directory
             if res:
                 saveImg(resized_img,
                         class_name,
                         resized_bounding_box,
-                        key,
+                        model,
                         str(index),
                         video_file[0],
                         frame_num,
