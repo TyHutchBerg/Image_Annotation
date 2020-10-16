@@ -91,7 +91,7 @@ if __name__ == '__main__':
             A.OneOf
             (
                 [
-                    A.RandomBrightnessContrast(brightness_limit=(-.10, 0))
+                    A.RandomBrightnessContrast(brightness_limit=(-.10, .10))
                 ],
                 p=1
             ),
